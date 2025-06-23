@@ -1,0 +1,2156 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated title to reflect the new target audience and approachable tone -->
+    <title>Bea Villanea | Strategic support for growing your business</title>
+    <!-- Tailwind CSS CDN for utility-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN for scalable vector icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <!-- Google Fonts for custom typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ENHANCED: Custom CSS variables for vibrant brand identity */
+        :root {
+            --primary-pink: #E91E63; /* Stronger, more vibrant pink */
+            --primary-pink-dark: #C2185B; /* Darker shade for hover states */
+            --primary-pink-light: #F8BBD9; /* Light pink for backgrounds */
+            --primary-pink-ultra-light: #FCE4EC; /* Ultra light pink */
+            --accent-gradient: linear-gradient(135deg, #E91E63, #FF6B9D); /* Dynamic gradient */
+            --accent-gradient-hover: linear-gradient(135deg, #C2185B, #E91E63); /* Hover gradient */
+            --neutral-dark: #413f3f; /* Rich dark gray */
+            --neutral-medium: #7e7b7b; /* Medium gray */
+            --neutral-light: #c4c2c2; /* Light gray */
+            --neutral-ultra-light: #F7FAFC; /* Background color */
+            --success-color: #4CAF50; /* Green for success states */
+            --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-strong: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        /* ENHANCED: Typography system with better hierarchy */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--neutral-ultra-light);
+            color: var(--neutral-dark);
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--neutral-dark);
+            line-height: 1.2;
+        }
+        /* Optimized typography hierarchy - Adjusted font sizes for H1 and H2 */
+        h1 { font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 900; line-height: 1.1; }
+        h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 800; }
+        /* ENHANCED: Modern button system with better visual impact */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            background: var(--accent-gradient);
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 8px 32px rgba(233, 30, 99, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transform: perspective(1px) translateZ(0);
+        }
+        .btn-primary:hover {
+            background: var(--accent-gradient-hover);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(233, 30, 99, 0.4);
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            background-color: white;
+            color: var(--neutral-medium);
+            border: 2px solid #E2E8F0;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .btn-secondary:hover {
+            border-color: var(--primary-pink);
+            color: var(--primary-pink);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.2);
+        }
+        /* ENHANCED: Urgent CTA styling */
+        .btn-urgent {
+            position: relative;
+            animation: pulse-urgent 2s infinite;
+            background: linear-gradient(135deg, #FF6B9D, #E91E63, #C2185B);
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease infinite, pulse-urgent 2s infinite;
+        }
+        @keyframes pulse-urgent {
+            0%, 100% {
+                box-shadow: 0 8px 32px rgba(233, 30, 99, 0.3);
+                opacity: 1; /* Ensure opacity is reset */
+                transform: scale(1); /* Re-added for pulsing effect */
+            }
+            50% {
+                box-shadow: 0 12px 40px rgba(233, 30, 99, 0.5);
+                opacity: 0.8; /* Subtle opacity change */
+                transform: scale(1.05); /* Re-added for pulsing effect */
+            }
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        /* ENHANCED: Card system with better visual hierarchy */
+        .card-enhanced {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem; /* Adjusted from 2.5rem */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid #F1F5F9;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .card-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--accent-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        .card-enhanced:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+        }
+        .card-enhanced:hover::before {
+            transform: scaleX(1);
+        }
+        /* ENHANCED: Hero section with dramatic visual impact */
+        .hero-enhanced {
+            background: linear-gradient(135deg, var(--primary-pink-ultra-light) 0%, white 50%, #F0F9FF 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 4rem 0; /* Adjusted from 6rem */
+        }
+        .hero-enhanced::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 60%;
+            height: 180%;
+            background: radial-gradient(circle, var(--primary-pink-light), transparent 70%);
+            border-radius: 50%;
+            opacity: 0.15;
+            animation: heroFloat 8s ease-in-out infinite;
+        }
+        .hero-enhanced::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: -20%;
+            width: 80%;
+            height: 120%;
+            background: radial-gradient(circle, #E3F2FD, transparent 60%);
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: heroFloat 10s ease-in-out infinite reverse;
+        }
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+            33% { transform: translateY(-30px) rotate(2deg) scale(1.05); }
+            66% { transform: translateY(20px) rotate(-1deg) scale(0.98); }
+        }
+        /* ENHANCED: Value proposition highlighting */
+        .value-highlight {
+            background: linear-gradient(135deg, var(--primary-pink), var(--primary-pink-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            display: inline-block;
+            position: relative;
+        }
+        .value-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+            opacity: 0.3;
+        }
+        /* ENHANCED: Social proof styling */
+        .social-proof-banner {
+            background: linear-gradient(135deg, #C2185B, #cf6891);
+            color: white;
+            padding: 0.75rem 0; /* Adjusted from 1rem */
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3);
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem; /* Adjusted from 2rem */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            border-left: 4px solid var(--primary-pink);
+            flex-shrink: 0; /* Important for carousel */
+            min-width: 80%; /* On small screens, nearly full width */
+            width: 80%; /* fallback */
+        }
+        /* Responsive card widths for infinite scroll */
+        @media (min-width: 768px) { /* md breakpoint */
+            .testimonial-card {
+                min-width: calc((100% / 2) - 0.75rem); /* Two cards per view with gap (gap-6 = 1.5rem = 24px, so 0.75rem on each side) */
+                width: calc((100% / 2) - 0.75rem);
+            }
+        }
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .testimonial-card {
+                min-width: calc((100% / 3) - 1rem); /* Three cards per view with gap (gap-6 = 1.5rem, approx 1rem per side) */
+                width: calc((100% / 3) - 1rem);
+            }
+        }
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 15px; /* Adjusted from 20px */
+            font-size: 3rem; /* Adjusted from 4rem */
+            color: var(--primary-pink);
+            opacity: 0.3;
+            font-family: 'Playfair Display', serif;
+        }
+        /* ENHANCED: Results showcase styling */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Default to 2 columns on small screens */
+            gap: 1rem; /* Adjusted from 2rem */
+            margin: 2rem 0; /* Adjusted from 3rem */
+            align-items: stretch; /* Ensures cards stretch to equal height */
+            justify-content: center; /* Center items in the grid */
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .results-grid {
+                grid-template-columns: repeat(4, 1fr); /* 4 columns on larger screens */
+                gap: 1.5rem; /* Slightly more gap on larger screens */
+            }
+        }
+        .result-stat {
+            text-align: center;
+            padding: 1rem; /* Adjusted from 2rem */
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex; /* Added flexbox for internal centering */
+            flex-direction: column; /* Stack content vertically */
+            justify-content: center; /* Center content vertically */
+            align-items: center;    /* Center content horizontally */
+            height: 130px; /* Enforce uniform height */
+            /* Added for width uniformity within grid items */
+            min-width: 0; /* Allows the grid item to shrink as needed */
+            width: 100%; /* Ensures it takes the full width of its grid cell */
+        }
+        .result-stat:hover {
+            transform: translateY(-8px);
+        }
+        .result-number {
+            font-size: 2.5rem; /* Adjusted from 3rem */
+            font-weight: 900;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 0.25rem; /* Adjusted from 0.5rem */
+        }
+        .result-label {
+            font-size: 0.8rem; /* Adjusted from 0.9rem */
+            font-weight: 600;
+            color: var(--neutral-medium);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        /* ENHANCED: Animation system */
+        .animate-fade-up {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .animate-fade-up:not(.in-view) {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        .animate-fade-up.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .animate-scale-in {
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .animate-scale-in:not(.in-view) {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        .animate-scale-in.in-view {
+            opacity: 1;
+            transform: scale(1);
+        }
+        /* ENHANCED: Section styling */
+        .section-enhanced {
+            padding: 4rem 0; /* Adjusted from 6rem */
+        }
+        .section-title {
+            font-size: clamp(2.2rem, 3.5vw, 3rem); /* Adjusted for smaller size */
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 1.25rem; /* Adjusted from 1.5rem */
+            background: linear-gradient(135deg, var(--neutral-dark), var(--primary-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-subtitle {
+            font-size: 1.1rem; /* Adjusted from 1.3rem */
+            color: var(--neutral-medium);
+            text-align: center;
+            max-width: 600px; /* Adjusted from 700px */
+            margin: 0 auto 3rem; /* Adjusted from 4rem */
+            line-height: 1.7;
+            font-weight: 500;
+        }
+        /* ENHANCED: Banner animation with urgency */
+        .scrolling-banner {
+            overflow: hidden;
+            background: var(--primary-pink);
+            color: white;
+            padding: 1rem 0; /* Adjusted from 1.25rem */
+            position: relative;
+            background: linear-gradient(135deg, var(--primary-pink), #FF6B9D);
+        }
+        .scrolling-banner::before,
+        .scrolling-banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100px; /* Adjusted from 120px */
+            height: 100%;
+            z-index: 2;
+        }
+        .scrolling-banner::before {
+            left: 0;
+            background: linear-gradient(to right, var(--primary-pink), transparent);
+        }
+        .scrolling-banner::after {
+            right: 0;
+            background: linear-gradient(to left, var(--primary-pink), transparent);
+        }
+        .banner-content {
+            display: flex;
+            animation: scroll-left 10s linear infinite; /* Adjusted from 20s to 10s for faster speed */
+            font-weight: 800;
+            font-size: 1.2rem; /* Adjusted from 1.5rem */
+            letter-spacing: 0.1em;
+        }
+        .banner-text {
+            margin-right: 3rem; /* Adjusted from 4rem */
+            white-space: nowrap;
+        }
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        /* ENHANCED: Urgency indicators */
+        .urgency-indicator {
+            background: linear-gradient(135deg, #FF4444, #FF6B6B);
+            color: white;
+            padding: 0.4rem 0.8rem; /* Adjusted from 0.5rem 1rem */
+            border-radius: 20px;
+            font-size: 0.8rem; /* Adjusted from 0.85rem */
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: urgency-pulse 2s infinite;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        /* Re-added transform properties for visual pulse */
+        @keyframes urgency-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        /* ENHANCED: Responsive improvements */
+        @media (max-width: 768px) {
+            .section-enhanced {
+                padding: 3rem 0; /* Adjusted from 4rem */
+            }
+            .hero-enhanced {
+                padding: 3rem 0; /* Adjusted from 4rem */
+            }
+            .btn-primary {
+                padding: 0.8rem 2rem; /* Adjusted from 1rem 2.5rem */
+                font-size: 0.9rem; /* Adjusted from 1rem */
+            }
+            .card-enhanced {
+                padding: 1.5rem; /* Adjusted from 2rem */
+            }
+        }
+        /* Specific mobile adjustments for header branding */
+        @media (max-width: 640px) { /* Small screens and below */
+            .mobile-tagline {
+                font-size: 0.625rem; /* text-xxs */
+                display: block; /* Force new line */
+                line-height: 1.2;
+                margin-left: 0 !important; /* Remove ml on small screens */
+            }
+            header .flex-shrink-0 a .text-2xl { /* Target the main name specifically */
+                font-size: 1.5rem; /* Adjusted for mobile view */
+            }
+        }
+        /* ENHANCED: Visual elements */
+        .accent-dot {
+            width: 8px; /* Adjusted from 10px */
+            height: 8px; /* Adjusted from 10px */
+            background: var(--primary-pink);
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 0.75rem; /* Adjusted from 0 1rem */
+            animation: dot-pulse 2s infinite;
+        }
+        @keyframes dot-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+        .divider-enhanced {
+            height: 1px; /* Adjusted from 2px */
+            background: linear-gradient(to right, transparent, var(--primary-pink), transparent);
+            margin: 3rem 0; /* Adjusted from 4rem */
+        }
+        /* ENHANCED: Icon styling */
+        .icon-enhanced {
+            background: linear-gradient(135deg, var(--primary-pink-light), var(--primary-pink-ultra-light));
+            border-radius: 20px; /* Adjusted from 24px */
+            padding: 0.75rem; /* Adjusted from 1rem */ /* Further reduced padding */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.75rem; /* Adjusted from 1rem */ /* Further reduced margin */
+            transition: all 0.3s ease;
+        }
+        .icon-enhanced:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        .icon-enhanced i {
+            color: var(--primary-pink);
+            width: 1.5rem; /* Adjusted from 1.75rem */ /* Further reduced icon size */
+            height: 1.5rem; /* Adjusted from 1.75rem */ /* Further reduced icon size */
+        }
+        /* ENHANCED: Floating CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 1.5rem; /* Adjusted from 2rem */
+            right: 1.5rem; /* Adjusted from 2rem */
+            z-index: 1000;
+            padding: 1rem 1.5rem; /* Adjusted from 1.25rem 2rem */
+            border-radius: 50px;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(233, 30, 99, 0.4); /* Adjusted from 12px 40px */
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem; /* Adjusted from 0.75rem */
+            animation: floating-bounce 3s ease-in-out infinite;
+        }
+        .floating-cta:hover {
+            transform: translateY(-5px) scale(1.05);
+            background: var(--accent-gradient-hover);
+            box-shadow: 0 15px 45px rgba(233, 30, 99, 0.5); /* Adjusted from 20px 60px */
+        }
+        @keyframes floating-bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); } /* Adjusted from -10px */
+        }
+        /* Contact Form Enhanced Styling */
+        .contact-form {
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem; /* Adjusted from 3rem */
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1); /* Adjusted from 20px 60px */
+            border: 1px solid #F1F5F9;
+        }
+        .contact-form .form-group {
+            margin-bottom: 1rem; /* Adjusted from 1.5rem */
+        }
+        .contact-form label {
+            display: block;
+            color: var(--neutral-dark);
+            font-weight: 600;
+            margin-bottom: 0.5rem; /* Adjusted from 0.75rem */
+            font-size: 0.9rem; /* Adjusted from 1rem */
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem 1rem; /* Adjusted from 1rem 1.25rem */
+            border: 2px solid #E2E8F0;
+            border-radius: 10px; /* Adjusted from 12px */
+            font-size: 0.9rem; /* Adjusted from 1rem */
+            color: var(--neutral-dark);
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-pink);
+            box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.2); /* Adjusted from 4px */
+            transform: translateY(-1px); /* Adjusted from -2px */
+        }
+        .contact-form textarea {
+            min-height: 100px; /* Adjusted from 140px */
+            resize: vertical;
+        }
+        /* Success message styling */
+        .success-message {
+            background: linear-gradient(135deg, #4CAF50, #45A049);
+            color: white;
+            padding: 0.8rem; /* Adjusted from 1rem */
+            border-radius: 10px; /* Adjusted from 12px */
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+        /* Infinite Carousel specific styles */
+        #testimonial-carousel-wrapper {
+            position: relative;
+            overflow: hidden; /* Hide scrollbars */
+            width: 100%;
+            padding: 0.5rem 0; /* Adjusted from 1rem */
+        }
+        #testimonial-carousel-track {
+            display: flex;
+            gap: 0.75rem; /* Adjusted from 1rem (gap-3 instead of gap-4) */
+            animation: scroll-x linear infinite var(--animation-duration);
+            /* Add this to enable GPU acceleration for smoother animation */
+            will-change: transform;
+        }
+        #testimonial-carousel-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes scroll-x {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Portfolio Carousel Specific Styles */
+        .portfolio-carousel {
+            position: relative;
+            max-width: 900px; /* Adjust as needed */
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 24px;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .portfolio-carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .portfolio-slide {
+            position: relative; /* Needed for absolute positioning of blurred-bg-image */
+            min-width: 100%;
+            box-sizing: border-box;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            overflow: hidden; /* Hide overflow from blurred image */
+        }
+
+        .blurred-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: blur(20px); /* Adjust blur strength as needed */
+            opacity: 0.5; /* Adjust opacity as needed */
+            background-size: cover;
+            background-position: center;
+            z-index: 1; /* Ensure it's behind the main content */
+            pointer-events: none; /* Allows clicks to pass through to elements below */
+        }
+        .portfolio-slide img {
+            position: relative; /* Bring main image to front */
+            z-index: 2; /* Ensure it's above the blurred background */
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: var(--shadow-soft);
+            object-fit: contain; /* Ensures the entire image is visible within the bounds */
+            max-height: 500px; /* Limit height to prevent overly tall images */
+        }
+
+        .portfolio-slide-info {
+            position: relative; /* Bring info to front */
+            z-index: 2;
+            text-align: center;
+            margin-top: 1.5rem;
+            background: rgba(255, 255, 255, 0.8); /* Slightly opaque background for readability */
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .portfolio-slide-info h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary-pink);
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-slide-info p {
+            color: var(--neutral-medium);
+            font-size: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .portfolio-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            padding: 1rem;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: var(--shadow-soft);
+            transition: background 0.3s ease;
+        }
+
+        .portfolio-nav-btn:hover {
+            background: white;
+        }
+
+        .portfolio-nav-btn i {
+            color: var(--primary-pink);
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .portfolio-nav-btn.prev {
+            left: 1rem;
+        }
+
+        .portfolio-nav-btn.next {
+            right: 1rem;
+        }
+
+        .portfolio-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            gap: 0.75rem;
+        }
+
+        .portfolio-dot {
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-pink-light);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .portfolio-dot.active {
+            background-color: var(--primary-pink);
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-carousel {
+                padding: 0;
+            }
+            .portfolio-slide {
+                padding: 1rem;
+            }
+            .portfolio-slide-info h3 {
+                font-size: 1.25rem;
+            }
+            .portfolio-slide-info p {
+                font-size: 0.875rem;
+            }
+            .portfolio-nav-btn {
+                padding: 0.75rem;
+            }
+            .portfolio-nav-btn i {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ENHANCED: Header with improved styling and urgency -->
+    <header class="bg-white/95 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-100">
+        <!-- Social Proof Banner -->
+        <div class="social-proof-banner text-sm">
+            <div class="flex items-center justify-center gap-2">
+                <i data-lucide="check-circle" class="h-4 w-4"></i>
+                <span>✨ Trusted by Founders and Busineess owners </span>
+                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+            </div>
+        </div>
+
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold flex flex-col sm:flex-row items-start sm:items-baseline"> <!-- Adjusted to items-start for left alignment on mobile -->
+                        <span style="color: var(--primary-pink);" class="text-2xl sm:text-2xl md:text-2xl lg:text-2xl">Bea Villanea</span> <!-- Explicit text-2xl for consistency -->
+                        <!-- Adjusted responsive text sizing for tagline and removed sm:ml-2 to prevent extra space on stacked mobile view -->
+                        <span class="text-gray-700 text-xs sm:text-sm md:text-base lg:text-lg leading-tight sm:leading-normal">| Strategic virtual partner for your Business</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex"> <!-- Explicitly hidden on small screens, flex on md and up -->
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="#services" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">How I Help</a>
+                        <a href="#portfolio" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">My Work</a>
+                        <a href="#about" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">About Me</a>
+                        <a href="#results" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">My Impact</a>
+                        <a href="#testimonials" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">Success Stories</a>
+                        <a href="#contact" class="btn-primary text-sm px-6 py-2">Let's Talk</a>
+                    </div>
+                </div>
+
+                <div class="md:hidden"> <!-- Always visible on small screens, hidden on md and up -->
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 p-2 rounded-md focus:outline-none cursor-pointer">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="space-y-2">
+                    <a href="#services" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">How I Help</a>
+                    <a href="#portfolio" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">My Work</a>
+                    <a href="#about" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">About Me</a>
+                    <a href="#results" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">My Impact</a>
+                    <a href="#testimonials" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">Success Stories</a>
+                    <a href="#contact" class="btn-primary text-sm px-6 py-2">Let's Talk</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ENHANCED: Hero Section with dramatic impact and stronger value proposition for CEOs/Business Owners -->
+        <section class="hero-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Text Content -->
+                    <div class="animate-fade-up relative z-10">
+                        <div class="inline-flex items-center bg-white/70 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-pink-200">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                            <span class="text-sm font-medium text-gray-700">🚀 Ready to Scale Your business!</span>
+                        </div>
+                        <h1 class="mb-6 font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center lg:text-left">
+                            DOMINATE & CAPTURE THE<span style="color: var(--primary-pink);"> DIGITAL STAGE</span>
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8 leading-relaxed font-medium text-center lg:text-left">
+                            Still trying to do it all yourself? It's time to delegate and <strong>stand out in the digital marketing space. </strong>Think of me as your right-hand person and strategic partner in growing your business. I'll ensure everything runs seamlessly behind the scenes, so you can focus on what truly moves the needle and SMASH your 7-figure goals!
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
+                            <a href="#contact" class="btn-primary btn-urgent">
+                                <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
+                                Connect Now - It's FREE!
+                            </a>
+                            <a href="#results" class="btn-secondary relative z-20">
+                                <i data-lucide="trending-up" class="mr-2 h-4 w-4"></i>
+                                See My Impact
+                            </a>
+                        </div>
+                        <!-- Enhanced credibility indicators - Adjusted for better mobile responsiveness -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+                            <div class="flex items-center justify-center lg:justify-start">
+                                <i data-lucide="check-circle" class="h-4 w-4 mr-2 text-green-500"></i>
+                                <span class="text-gray-600">14+ Years work experience</span>
+                            </div>
+                            <div class="flex items-center justify-center lg:justify-start">
+                                <i data-lucide="check-circle" class="h-4 w-4 mr-2 text-green-500"></i>
+                                <span class="text-gray-600">Google & Meta Certified</span>
+                            </div>
+                            <div class="flex items-center justify-center lg:justify-start">
+                                <i data-lucide="check-circle" class="h-4 w-4 mr-2 text-green-500"></i>
+                                <span class="text-gray-600">Digital Marketing fluent</span>
+                            </div>
+                        </div>
+                        <!-- NEW: Logos for Google, Meta, and Microsoft - Adjusted for better mobile responsiveness -->
+                        <div class="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-6 mt-6">
+                            <img src="https://ik.imagekit.io/ewoioxq0g/google-icon-logo-symbol-free-png.jpeg?updatedAt=1750363837747" alt="Google Logo" class="h-8 w-8 rounded-full shadow-md">
+                            <img src="https://ik.imagekit.io/ewoioxq0g/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjEwOTEtMDNfMS5wbmc.jpeg?updatedAt=1750363817942">
+                            <img src="https://ik.imagekit.io/ewoioxq0g/microsoft-icon-logo-symbol-free-png.jpeg?updatedAt=1750363800770" alt="Microsoft Logo" class="h-8 w-8 rounded-full shadow-md">
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Image Section -->
+                    <div class="animate-scale-in relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-200 to-purple-200 rounded-3xl transform rotate-3 opacity60"></div>
+                        <div class="absolute inset-0 bg-gradient-to-tl from-blue-100 to-pink-100 rounded-3xl transform -rotate-2 opacity-40"></div>
+                        <img
+                            src="https://ik.imagekit.io/ewoioxq0g/WhatsApp%20Image%202025-06-14%20at%2003.36.20_93175f5f.jpg?updatedAt=1749886904306"
+                            alt="Bea Villanea - Strategic Operations and Creative Partner for Business Leaders"
+                            class="relative rounded-3xl shadow-2xl w-full h-auto object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/E91E63/ffffff?text=Bea+Villanea';"
+                        >
+                        <!-- Floating testimonial preview -->
+                        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 max-w-xs">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <div class="flex">
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 italic">"Bea keeps our client projects on track and frees our team for high-level strategy. Invaluable!"</p>
+                            <p class="text-xs text-gray-500 mt-1">- Ceo Founder, Design Business</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Results Section - High Impact -->
+        <section id="results" class="section-enhanced bg-gradient-to-br from-gray-50 to-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">You can achieve your goals too! Delegate and focus. </h2>
+                    <p class="section-subtitle">
+                        Business Owners that partnered with me achieve rapid, measurable results, boosting efficiency and freeing up leadership for core growth.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 justify-items-center">
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number" data-final-value="20+">0</span>
+                        <span class="result-label">Leadership Hours Reclaimed Weekly</span>
+                    </div>
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number" data-final-value="45%">0</span>
+                        <span class="result-label"> Productivity Boost</span>
+                    </div>
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number" data-final-value="3x">0</span>
+                        <span class="result-label">Potential Revenue Increase</span>
+                    </div>
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number" data-final-value="30">0</span>
+                        <span class="result-label">Day Operational Optimization</span>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#testimonials" class="btn-secondary">
+                        <i data-lucide="arrow-right" class="mr-2 h-4 w-4"></i>
+                        Hear Agency Success Stories
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: Scrolling Banner with stronger messaging -->
+        <div class="scrolling-banner">
+            <div class="banner-content">
+                <span class="banner-text">⚡ FREE UP 20+ HOURS FOR STRATEGY</span>
+                <span class="banner-text">🚀 ACCELERATE YOUR AGENCY'S GROWTH</span>
+                <span class="banner-text">✨ OPTIMIZE OPERATIONS & PROJECTS</span>
+                <span class="banner-text">📈 ENSURE SEAMLESS CLIENT COMMUNICATION</span>
+                <span class="banner-text">💎 HIGH-IMPACT EA SUPPORT</span>
+                <span class="banner-text">🎯 AGENCY EFFICIENCY IN 30 DAYS</span>
+                <span class="banner-text">⚡ FREE UP 20+ HOURS FOR STRATEGY</span>
+                <span class="banner-text">🚀 ACCELERATE YOUR AGENCY'S GROWTH</span>
+                <span class="banner-text">✨ OPTIMIZE OPERATIONS & PROJECTS</span>
+                <span class="banner-text">📈 ENSURE SEAMLESS CLIENT COMMUNICATION</span>
+            </div>
+        </div>
+
+        <!-- ENHANCED: Problem Section with stronger emotional impact -->
+        <section id="problem" class="section-enhanced bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Why Your Agency Needs Strategic Delegation</h2>
+                    <p class="section-subtitle">
+                        As a leader in a fast-growing digital marketing agency, you shouldn't be bogged down by daily operations. It's time to delegate for scalable growth.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-4"> <!-- Adjusted gap from 6 to 4 -->
+                    <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;"> <!-- Adjusted padding from 1.5rem to 1.25rem -->
+                        <div class="icon-enhanced" style="padding: 0.4rem; margin-bottom: 0.4rem;"> <!-- Adjusted padding and margin-bottom -->
+                            <i data-lucide="clock" class="h-5 w-5"></i> <!-- Adjusted icon size from h-6 w-6 to h-5 w-5 -->
+                        </div>
+                        <h3 class="text-base font-bold mb-2 text-red-600">Operational Bottlenecks</h3> <!-- Adjusted font size from lg to base, mb-3 to mb-2 -->
+                        <p class="text-xs text-gray-600 mb-2">
+                            Daily admin & coordination drains <strong>leadership time</strong>, hindering agency scalability.
+                        </p>
+                        <div class="text-xs text-red-500 font-semibold">
+                            💰 Cost: Stagnant growth & missed revenue opportunities
+                        </div>
+                    </div>
+                    <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                        <div class="icon-enhanced" style="padding: 0.4rem; margin-bottom: 0.4rem;">
+                            <i data-lucide="message-circle" class="h-5 w-5"></i>
+                        </div>
+                        <h3 class="text-base font-bold mb-2 text-red-600">Client Communication Overload</h3>
+                        <p class="text-xs text-gray-600 mb-2">
+                            Constant client updates distract from <strong>strategic relationships</strong> and campaign optimization.
+                        </p>
+                        <div class="text-xs text-red-500 font-semibold">
+                            📉 Result: Reduced client satisfaction & potential churn
+                        </div>
+                    </div>
+                    <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                        <div class="icon-enhanced" style="padding: 0.4rem; margin-bottom: 0.4rem;">
+                            <i data-lucide="battery-low" class="h-5 w-5"></i>
+                        </div>
+                        <h3 class="text-base font-bold mb-2 text-red-600">Executive Burnout Risk</h3>
+                        <p class="text-xs text-gray-600 mb-2">
+                            Juggling multiple roles causes burnout, jeopardizing agency's <strong>health and innovation</strong>.
+                        </p>
+                        <div class="text-xs text-red-500 font-semibold">
+                            🔥 Warning: Talent drain & decreased agency performance
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#contact" class="btn-primary btn-urgent">
+                        <i data-lucide="arrow-right" class="mr-2 h-5 w-5"></i>
+                        Solve Your Agency's Challenges - Book Your Free Call
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: Services Section with better value proposition for CEOs/Business Owners -->
+        <section id="services" class="section-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">High-Impact Support for Digital Marketing Agencies</h2>
+                    <p class="section-subtitle">
+                        I offer strategic Executive Assistant and Operations Management support, enabling your agency to run seamlessly, scale efficiently, and outperform the competition.
+                    </p>
+                </div>
+
+                <!-- Combined Category: Integrated Agency Operations & Executive Support -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border border-pink-100 mb-12 animate-fade-up">
+                    <h3 class="text-2xl font-bold mb-3 text-center text-gray-800">Integrated Agency Operations & Executive Support</h3>
+                    <p class="text-base text-gray-600 mb-6 text-center font-medium">Seamless Project Execution, Optimized Workflows, and Dedicated Executive Assistance</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                         <!-- Executive Support -->
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced">
+                                <i data-lucide="calendar-check" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="text-base font-bold mb-2">Executive Calendar & Inbox Management</h3>
+                            <p class="text-xs text-gray-600 mb-3">Take ownership of complex calendars, email inboxes, and scheduling, organize meetings ensuring no detail is missed. Confidential and reliable support for both professional and personal priorities, maintaining executive focus.</p>
+                            <div class="text-xs text-pink-600 font-semibold">⏰ Maximize leadership time for strategic work.</div>
+                        </div>
+                        <!-- Operations & Project Management -->
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced">
+                                <i data-lucide="clipboard-check" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="text-base font-bold mb-2">End-to-End Project Coordination</h3>
+                            <p class="text-xs text-gray-600 mb-3">Manage internal & client projects using ClickUp, Notion, Asana, Monday.com to ensure smooth execution.</p>
+                            <div class="text-xs text-pink-600 font-semibold">✨ Projects delivered on time & budget.</div>
+                        </div>
+                       
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced">
+                                <i data-lucide="users" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="text-base font-bold mb-2">Cross-Functional Team Coordination</h3>
+                            <p class="text-xs text-gray-600 mb-3">Coordinate seamlessly with designers, video editors, marketers, and external partners for project synergy.</p>
+                            <div class="text-xs text-pink-600 font-semibold">🤝 Harmonized teams, enhanced collaboration.</div>
+                        </div>
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced">
+                                <i data-lucide="file-text" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="text-base font-bold mb-2">Goal Breakdown & Optimization (SOPs)</h3>
+                            <p class="text-xs text-gray-600 mb-3">Convert objectives into actionable tasks with clear timelines and ownership. Enhance workflows and develop SOPs for repeatable success.</p>
+                            <div class="text-xs text-pink-600 font-semibold">📈 Operational excellence & efficiency.</div>
+                        </div>
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced">
+                                <i data-lucide="mail" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="text-base font-bold mb-2">Seamless Client Reporting & Communication</h3>
+                            <p class="text-xs text-gray-600 mb-3">Handle day-to-day client communication, updates, and inquiries reports with professionalism and responsiveness.</p>
+                            <div class="text-xs text-pink-600 font-semibold">💬 Foster strong, reliable client connections.</div>
+                        </div>
+                       
+                       
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced">
+                                <i data-lucide="sparkles" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="text-base font-bold mb-2">Your Dedicated Growth & Accountability Partner</h3>
+                            <p class="text-xs text-gray-600 mb-3">Provide strategic support, insights, and motivation to keep you focused on growth.</p>
+                            <div class="text-xs text-pink-600 font-semibold">🎉 Sharpen your vision & crush goals!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Strategic Digital Marketing Support -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border border-pink-100 mb-12 animate-fade-up">
+                    <h3 class="text-2xl font-bold mb-3 text-center text-gray-800">Strategic Digital Marketing Support</h3>
+                    <p class="text-base text-gray-600 mb-6 text-center font-medium">Amplifying Your Agency's Online Presence & Tools</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced">
+                                <i data-lucide="lightbulb" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="text-base font-bold mb-2">Bottleneck Identification & Solution Design</h3>
+                            <p class="text-xs text-gray-600 mb-3">Proactively identify operational bottlenecks and propose innovative systems or solutions to enhance agency flow.</p>
+                            <div class="text-xs text-pink-600 font-semibold">💡 Drive efficiency and continuous improvement.</div>
+                        </div>
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced">
+                                <i data-lucide="wrench" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="text-base font-bold mb-2">Efficiency Tool Research & Implementation</h3>
+                            <p class="text-xs text-gray-600 mb-3">Research, evaluate, and implement new tools (e.g., Zapier, Make) that increase agency efficiency or visibility.</p>
+                            <div class="text-xs text-pink-600 font-semibold">⚙️ Leverage tech for a competitive edge.</div>
+                        </div>
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced">
+                                <i data-lucide="globe" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="text-base font-bold mb-2">Website & Landing Page Optimization</h3>
+                            <p class="text-xs text-gray-600 mb-3">Support basic website updates (WordPress, Webflow) and landing page builders for optimal client lead gen.</p>
+                            <div class="text-xs text-pink-600 font-semibold">🌐 Enhance digital presence and conversions.</div>
+                        </div>
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced">
+                                <i data-lucide="trending-up" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="text-base font-bold mb-2">Digital Marketing Operations Support</h3>
+                            <p class="text-xs text-gray-600 mb-3">Assist with basic SEO tasks, ad campaign tracking (Google Ads, Meta Ads), and CRM management for client success.</p>
+                            <div class="text-xs text-pink-600 font-semibold">🚀 Boost campaign performance & client results.</div>
+                        </div>
+                        <!-- NEW CARD: Social Media Management -->
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced">
+                                <i data-lucide="users-2" class="h-5 w-5"></i> <!-- Icon for social media/community -->
+                            </div>
+                            <h3 class="text-base font-bold mb-2">Social Media Management & Community Engagement</h3>
+                            <p class="text-xs text-gray-600 mb-3">Oversee social media platforms, schedule content, and foster an engaged online community for your agency or clients.</p>
+                            <div class="text-xs text-pink-600 font-semibold">💬 Grow brand visibility and audience loyalty.</div>
+                        </div>
+                        <!-- NEW CARD: Graphic Design Support -->
+                        <div class="card-enhanced animate-fade-up" style="padding: 1.25rem;">
+                            <div class="icon-enhanced">
+                                <i data-lucide="palette" class="h-5 w-5"></i> <!-- Icon for graphic design -->
+                            </div>
+                            <h3 class="text-base font-bold mb-2">Essential Graphic Design Support</h3>
+                            <p class="text-xs text-gray-600 mb-3">Create compelling visuals, manage creative assets, and assist with basic design needs for marketing campaigns.</p>
+                            <div class="text-xs text-pink-600 font-semibold">🎨 Elevate visual content and brand aesthetics.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#contact" class="btn-primary">
+                        <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
+                        Let's Optimize Your Agency's Operations!
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: My Work Section -->
+        <section id="portfolio" class="section-enhanced bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">My Works</h2>
+                    <p class="section-subtitle">
+                        See tangible examples of how I've supported businesses with strategic design, web optimization, and conversion funnel development.
+                    </p>
+                </div>
+
+                <div class="portfolio-carousel">
+                    <div class="portfolio-carousel-track" id="portfolio-carousel-track">
+                        <!-- Slide 1: Engaging Social Media Graphic -->
+                        <div class="portfolio-slide">
+                            <div class="blurred-bg-image" style="background-image: url('https://ik.imagekit.io/ewoioxq0g/10.png?updatedAt=1750714006717');"></div>
+                            <img src="https://ik.imagekit.io/ewoioxq0g/10.png?updatedAt=1750714006717" alt="Social Media Graphic Sample" onerror="this.onerror=null; this.src='https://placehold.co/800x450/FF6B9D/ffffff?text=Social+Media+Graphic+Example';" />
+                            <div class="portfolio-slide-info">
+                                <h3>Engaging Social Media Graphic</h3>
+                                <p>Designed a series of visually appealing social media graphics to boost client engagement and brand presence across various platforms.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2: Optimized Landing Page Design -->
+                        <div class="portfolio-slide">
+                            <div class="blurred-bg-image" style="background-image: url('https://ik.imagekit.io/ewoioxq0g/6.png?updatedAt=1750714006742');"></div>
+                            <img src="https://ik.imagekit.io/ewoioxq0g/6.png?updatedAt=1750714006742" alt="Modern Landing Page Design Sample" onerror="this.onerror=null; this.src='https://placehold.co/800x450/E91E63/ffffff?text=Modern+Landing+Page+Design';" />
+                            <div class="portfolio-slide-info">
+                                <h3>Optimized Landing Page Design</h3>
+                                <p>Developed and updated high-converting landing pages for client campaigns, focusing on clear calls-to-action and user experience.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 3: Strategic Conversion Funnel Blueprint -->
+                        <div class="portfolio-slide">
+                            <div class="blurred-bg-image" style="background-image: url('https://ik.imagekit.io/ewoioxq0g/Untitled%20design%20(1).png?updatedAt=1750714006852');"></div>
+                            <img src="https://ik.imagekit.io/ewoioxq0g/Untitled%20design%20(1).png?updatedAt=1750714006852" alt="Conversion Funnel Diagram Sample" onerror="this.onerror=null; this.src='https://placehold.co/800x450/C2185B/ffffff?text=Conversion+Funnel+Blueprint';" />
+                            <div class="portfolio-slide-info">
+                                <h3>Strategic Conversion Funnel Blueprint</h3>
+                                <p>Built effective conversion funnels to guide users from awareness to client acquisition, optimizing each step for maximum results.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 4: Funnels Design & Optimization -->
+                        <div class="portfolio-slide">
+                            <div class="blurred-bg-image" style="background-image: url('https://ik.imagekit.io/ewoioxq0g/7.png?updatedAt=1750714006898');"></div>
+                            <img src="https://ik.imagekit.io/ewoioxq0g/7.png?updatedAt=1750714006898" alt="Funnels Design & Optimization Sample" onerror="this.onerror=null; this.src='https://placehold.co/800x450/FFC0CB/333333?text=Funnels+Design+%26+Optimization';" />
+                            <div class="portfolio-slide-info">
+                                <h3>Comprehensive Funnels Design & Optimization</h3>
+                                <p>Developed and optimized multi-stage marketing and sales funnels, from lead capture to conversion, ensuring seamless customer journeys.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 5: Client Presentation Design -->
+                        <div class="portfolio-slide">
+                            <div class="blurred-bg-image" style="background-image: url('https://ik.imagekit.io/ewoioxq0g/Untitled%20design%20(2).png?updatedAt=1750714006739');"></div>
+                            <img src="https://ik.imagekit.io/ewoioxq0g/Untitled%20design%20(2).png?updatedAt=1750714006739" alt="Client Presentation Design Sample" onerror="this.onerror=null; this.src='https://placehold.co/800x450/FF6B9D/ffffff?text=Client+Presentation+Design';" />
+                            <div class="portfolio-slide-info">
+                                <h3>Impactful Client Presentation Design</h3>
+                                <p>Created professional and visually engaging presentations for client pitches and performance reviews, translating complex data into clear, persuasive narratives.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 6: Thumbnails Design & Podcast Scheduling (Moved to last) -->
+                        <div class="portfolio-slide">
+                            <div class="blurred-bg-image" style="background-image: url('https://ik.imagekit.io/ewoioxq0g/9.png?updatedAt=1750714006798');"></div>
+                            <img src="https://ik.imagekit.io/ewoioxq0g/9.png?updatedAt=1750714006798" alt="Thumbnails Design and Podcast Scheduling Sample" onerror="this.onerror=null; this.src='https://placehold.co/800x450/F8BBD9/413f3f?text=Thumbnails+%26+Podcast+Management';" />
+                            <div class="portfolio-slide-info">
+                                <h3>Thumbnails Design & Podcast Scheduling</h3>
+                                <p>Designed compelling visuals to attract viewers to videos and organized episode releases to maintain a consistent content flow for podcasts.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation Buttons -->
+                    <button class="portfolio-nav-btn prev" id="portfolio-prev-btn">
+                        <i data-lucide="chevron-left"></i>
+                    </button>
+                    <button class="portfolio-nav-btn next" id="portfolio-next-btn">
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                    <!-- Pagination Dots -->
+                    <div class="portfolio-dots" id="portfolio-dots">
+                        <!-- Dots will be dynamically generated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: About Section with stronger positioning for business leaders -->
+        <section id="about" class="section-enhanced bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="animate-fade-up">
+                        <div class="inline-flex items-center bg-pink-100 rounded-full px-4 py-2 mb-6">
+                            <span class="text-sm font-semibold text-pink-700">👋 Meet Your Agency's Strategic Partner</span>
+                        </div>
+                        <h2 class="section-title text-left">Why Leading Digital Agencies Choose Me</h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            I'm Bea Villanea. With over 2 years as an Executive Assistant, Project Coordinator, and Operations Manager, I bring a unique blend of strategic operations, project management, and digital marketing acumen. My mission is to empower fast-growing digital agencies like yours to scale beyond 7 figures by managing daily operations and projects, freeing your leadership for high-impact growth initiatives.
+                        </p>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start justify-center md:justify-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">2+ Years High-Impact EA Experience:</span>
+                                    <span class="text-gray-700 ml-1">Proven track record supporting executives in fast-paced agency environments.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start justify-center md:justify-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Operational & Project Management Mastery:</span>
+                                    <span class="text-gray-700 ml-1">Expert in ClickUp, Notion, Asana, Monday.com, GSuite, Slack, and SOP development.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start justify-center md:justify-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Digital Marketing Skills:</span>
+                                    <span class="text-gray-700 ml-1">Familiar with SEO, Google Ads, Meta Ads, websites (WordPress), CRMs, and automation (Zapier, Manychat).</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start justify-center md:justify-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Philippines-Based, US Hours:</span>
+                                    <span class="text-gray-700 ml-1">Seamless collaboration during your key business hours with excellent English communication.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-6 border border-pink-100 mb-8">
+                            <p class="text-gray-700 italic text-lg">
+                                "My mission is simple: To be the strategic partner that precisely targets and surpasses your agency's growth milestones, ensuring a clear path to sustained success." - Bea
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#contact" class="btn-primary">
+                                <i data-lucide="message-circle" class="mr-2 h-5 w-5"></i>
+                                Discuss Your Agency's Needs
+                            </a>
+                            <a href="#testimonials" class="btn-secondary">
+                                <i data-lucide="star" class="mr-2 h-4 w-4"></i>
+                                See Agency Successes
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="animate-scale-in">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-pink-200 to-purple-200 rounded-3xl transform -rotate-3"></div>
+                            <div class="absolute inset-0 bg-gradient-to-tl from-blue-100 to-pink-100 rounded-3xl transform rotate-2 opacity-60"></div>
+                            <img
+                                src="https://ik.imagekit.io/ewoioxq0g/WhatsApp%20Image%202025-06-14%20at%2003.38.06_4e303549.jpg?updatedAt=1749886904306"
+                                alt="Bea Villanea - Strategic Operations Partner for Business Leaders"
+                                class="relative rounded-3xl shadow-2xl w-full h-auto object-cover"
+                                onerror="this.onerror=null; this.src='https://placehold.co/600x400/E91E63/ffffff?text=Bea+Villanea';"
+                            >
+                            <!-- Floating achievement badges -->
+                            <div class="absolute -top-4 -right-4 bg-white rounded-2xl p-3 shadow-xl border border-gray-100">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-pink-600">98%</div>
+                                    <div class="text-xs text-gray-600">Client Satisfaction</div>
+                                </div>
+                            </div>
+
+                            <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl p-3 shadow-xl border border-gray-100">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-pink-600">2+</div>
+                                    <div class="text-xs text-gray-600">Years Agency Support</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: 30-Day Transformation with better visual impact for business leaders -->
+        <section id="transformation" class="section-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Your Agency's 30-Day Transformation Plan</h2>
+                    <p class="section-subtitle">
+                        Experience measurable improvements in agency operations and leadership bandwidth <strong>within just 30 days</strong>. Accelerate your path to 7-figure revenue and beyond.
+                    </p>
+                </div>
+
+                <div class="relative max-w-5xl mx-auto">
+                    <!-- Enhanced timeline line -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-2 h-full bg-gradient-to-b from-pink-500 via-pink-400 to-pink-300 rounded-full shadow-lg"></div>
+
+                    <div class="space-y-12"> <!-- Adjusted from space-y-16 -->
+                        <!-- Phase 1 -->
+                        <div class="flex flex-col lg:flex-row items-center">
+                            <div class="w-full lg:w-1/2 lg:pr-8 text-right animate-fade-up"> <!-- Adjusted lg:pr-12 to lg:pr-8 -->
+                                <div class="card-enhanced mb-4 lg:mb-0" style="padding: 1.5rem;"> <!-- Adjusted padding for smaller card -->
+                                    <div class="mb-4"> <!-- Adjusted from mb-6 -->
+                                        <span class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 text-white rounded-full text-lg font-bold shadow-lg">1</span> <!-- Adjusted w-16 h-16 to w-12 h-12, text-xl to text-lg -->
+                                        <h3 class="text-xl font-bold mt-3 mb-1">Phase 1: Rapid Operational Stabilization (Days 1-7)</h3> 
+                                         <div class="text-sm text-pink-600 font-semibold mb-3">🚀 Fast Wins Phase</div><!-- Adjusted text-2xl to text-xl, mt-4 to mt-3, mb-2 to mb-1 -->
+                                        <p class="text-gray-600 text-sm leading-relaxed"> <!-- Adjusted text-lg to text-sm -->
+                                            Quickly integrate into your agency's workflows. Take over critical executive support and initiate key project management tasks. Immediate relief for your leadership team within 48 hours.
+                                        </p>
+                                        <div class="mt-3 text-xs"> <!-- Adjusted mt-4 to mt-3, text-sm to text-xs -->
+                                            <strong class="text-green-600">Result:</strong> <span class="text-gray-700">Leadership gains 5-8 strategic hours weekly.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative lg:mx-6"> <!-- Adjusted lg:mx-8 to lg:mx-6 -->
+                                <div class="w-7 h-7 bg-pink-500 rounded-full border-3 border-white shadow-xl flex items-center justify-center"> <!-- Adjusted w-8 h-8 to w-7 h-7, border-4 to border-3 -->
+                                    <i data-lucide="zap" class="h-3.5 w-3.5 text-white"></i> <!-- Adjusted h-4 w-4 to h-3.5 w-3.5 -->
+                                </div>
+                            </div>
+                            <div class="hidden lg:block w-full lg:w-1/2 lg:pl-8"> <!-- Adjusted lg:pl-12 to lg:pl-8 -->
+                                <!-- Empty space for alternating layout on desktop -->
+                            </div>
+                        </div>
+
+                        <!-- Phase 2 -->
+                        <div class="flex flex-col lg:flex-row items-center">
+                            <div class="hidden lg:block w-full lg:w-1/2 lg:pr-8"> <!-- Adjusted lg:pr-12 to lg:pr-8 -->
+                                <!-- Empty space for alternating layout on desktop -->
+                            </div>
+                            <div class="relative lg:mx-6"> <!-- Adjusted lg:mx-8 to lg:mx-6 -->
+                                <div class="w-7 h-7 bg-pink-500 rounded-full border-3 border-white shadow-xl flex items-center justify-center"> <!-- Adjusted w-8 h-8 to w-7 h-7, border-4 to border-3 -->
+                                    <i data-lucide="trending-up" class="h-3.5 w-3.5 text-white"></i> <!-- Adjusted h-4 w-4 to h-3.5 w-3.5 -->
+                                </div>
+                            </div>
+                            <div class="w-full lg:w-1/2 lg:pl-8 text-left animate-fade-up"> <!-- Adjusted lg:pl-12 to lg:pl-8 -->
+                                <div class="card-enhanced mt-4 lg:mt-0" style="padding: 1.5rem;"> <!-- Adjusted padding for smaller card -->
+                                    <div class="mb-4"> <!-- Adjusted from mb-6 -->
+                                        <span class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 text-white rounded-full text-lg font-bold shadow-lg">2</span> <!-- Adjusted w-16 h-16 to w-12 h-12, text-xl to text-lg -->
+                                        <h3 class="text-xl font-bold mt-3 mb-1">Phase 2: Process Optimization & Coordination (Days 8-25)</h3> 
+                                       <div class="text-sm text-pink-600 font-semibold mb-3">⚡ Building Momentum Phase</div><!-- Adjusted text-2xl to text-xl, mt-4 to mt-3, mb-2 to mb-1 -->
+                                        <p class="text-gray-600 text-sm leading-relaxed"> <!-- Adjusted text-lg to text-sm -->
+                                            Proactively manage client communication, coordinate with internal and external teams, and optimize workflows (SOPs). Ensure seamless project execution and stakeholder alignment.
+                                        </p>
+                                        <div class="mt-3 text-xs"> <!-- Adjusted mt-4 to mt-3, text-sm to text-xs -->
+                                            <strong class="text-green-600">Result:</strong> <span class="text-gray-700">Agency saves 15-20 hours weekly; projects run smoothly.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phase 3 -->
+                        <div class="flex flex-col lg:flex-row items-center">
+                            <div class="w-full lg:w-1/2 lg:pr-8 text-right animate-fade-up"> <!-- Adjusted lg:pl-12 to lg:pl-8 -->
+                                <div class="card-enhanced mb-4 lg:mb-0" style="padding: 1.5rem;"> <!-- Adjusted padding for smaller card -->
+                                    <div class="mb-4"> <!-- Adjusted from mb-6 -->
+                                        <span class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 text-white rounded-full text-lg font-bold shadow-lg">3</span> <!-- Adjusted w-16 h-16 to w-12 h-12, text-xl to text-lg -->
+                                        <h3 class="text-xl font-bold mt-3 mb-1">Phase 3: Accelerated Growth & Strategic Impact (Day 30+)</h3>
+                                       <div class="text-sm text-pink-600 font-semibold mb-3">🎯 Grow & Thrive Phase</div><!-- Adjusted text-2xl to text-xl, mt-4 to mt-3, mb-2 to mb-1 -->
+                                        <p class="text-gray-600 text-sm leading-relaxed"> <!-- Adjusted text-lg to text-sm -->
+                                            Your agency operates as a finely tuned machine. You can now fully focus on high-impact growth, scaling revenue beyond 7 figures, and leading market innovation with confidence.
+                                        </p>
+                                        <div class="mt-3 text-xs"> <!-- Adjusted mt-4 to mt-3, text-sm to text-xs -->
+                                            <strong class="text-green-600">Result:</strong> <span class="text-gray-700">Leadership reclaims 20+ hours; agency revenue accelerates.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative lg:mx-6"> <!-- Adjusted lg:mx-8 to lg:mx-6 -->
+                                <div class="w-7 h-7 bg-pink-500 rounded-full border-3 border-white shadow-xl flex items-center justify-center"> <!-- Adjusted w-8 h-8 to w-7 h-7, border-4 to border-3 -->
+                                    <i data-lucide="crown" class="h-3.5 w-3.5 text-white"></i> <!-- Adjusted h-4 w-4 to h-3.5 w-3.5 -->
+                                </div>
+                            </div>
+                            <div class="hidden lg:block w-full lg:w-1/2 lg:pl-8"> <!-- Adjusted lg:pl-12 to lg:pl-8 -->
+                                <!-- Empty space for alternating layout on desktop -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-16">
+                    <div class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-3xl p-8 mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Ready for an Agency Operational Makeover?</h3>
+                        <p class="text-gray-600 mb-6">Join leading digital marketing agencies who have optimized operations and accelerated growth.</p>
+                        <a href="#contact" class="btn-primary btn-urgent">
+                            <i data-lucide="rocket" class="mr-2 h-5 w-5"></i>
+                            Let's Accelerate Your Agency's Growth
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: Testimonials Section with infinite scroll carousel -->
+        <section id="testimonials" class="section-enhanced bg-gray-50 overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Success Stories from Leading Agencies</h2>
+                    <p class="section-subtitle">
+                        Hear how digital marketing agencies optimized their operations, dramatically boosting efficiency and client satisfaction.
+                    </p>
+                </div>
+
+                <div id="testimonial-carousel-wrapper" class="relative overflow-hidden w-full py-4">
+                    <div id="testimonial-carousel-track" class="flex gap-4"> <!-- Adjusted gap from 6 to 4 -->
+                        <!-- Testimonial Cards - These will be cloned by JavaScript for infinite scroll -->
+                        <div class="testimonial-card"> <!-- No inline style, use class -->
+                            <div class="star-rating flex mb-1"> <!-- Adjusted mb-2 to mb-1 -->
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i> <!-- Adjusted h-5 w-5 to h-4 w-4 -->
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed"> <!-- Adjusted text-lg to text-sm, mb-6 to mb-4 -->
+                                "Bea keeps our client projects on track and frees our team for high-level strategy. Invaluable!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/E91E63/ffffff?text=JS" alt="John S." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/E91E63/ffffff?text=JS';"> <!-- Adjusted w-14 h-14 to w-10 h-10, mr-4 to mr-3 -->
+                                <cite>
+                                    <p class="font-semibold text-base">John S.</p> <!-- Adjusted text-lg to text-base -->
+                                    <p class="text-xs text-gray-500">Agency Founder, 7-Figure Marketing Agency</p> <!-- Adjusted text-sm to text-xs -->
+                                    <p class="text-xs text-pink-600 font-semibold">Gained 20+ Hrs Weekly</p>
+                                </cite>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-1">
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed">
+                                "Bea totally changed how we run things. Now I lead the team and grow the business. Our team is crushing it!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/E91E63/ffffff?text=RL" alt="Rachel L." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/E91E63/ffffff?text=RL';">
+                                <div>
+                                    <p class="font-semibold text-base">Rachel L.</p>
+                                    <p class="text-xs text-gray-500">Enterprise Founder</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Productivity Jumped by 45%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-1">
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed">
+                                "Bea saves me 25+ hours a week! Projects finish faster, and our partners are happier. She's a true strategic partner!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/E91E63/ffffff?text=DP" alt="David P." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/E91E63/ffffff?text=DP';">
+                                <div>
+                                    <p class="font-semibold text-base">David P.</p>
+                                    <p class="text-xs text-gray-500">Managing Director</p>
+                                    <p class="text-xs text-pink-600 font-semibold">98% Project Satisfaction</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- NEW TESTIMONIAL CARD: Project Based Work -->
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-1">
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed">
+                                "Bea's project management skills are unparalleled. She kept our complex initiatives on track and delivered results ahead of schedule. A true professional!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/1a73e8/ffffff?text=MB" alt="Mark B." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/1a73e8/ffffff?text=MB';">
+                                <div>
+                                    <p class="font-semibold text-base">Mark B.</p>
+                                    <p class="text-xs text-gray-500">Startup Co-founder</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Projects Completed 15% Faster</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- NEW TESTIMONIAL CARD: Graphic Design & Thumbnail Creation -->
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-1">
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed">
+                                "Our social media visuals have never looked better! Bea's graphic design and thumbnail work is consistently high-quality and impactful, boosting our engagement."
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/34a853/ffffff?text=SR" alt="Sarah R." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/34a853/ffffff?text=SR';">
+                                <div>
+                                    <p class="font-semibold text-base">Sarah R.</p>
+                                    <p class="text-xs text-gray-500">Marketing Manager</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Engagement Up by 20%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- NEW TESTIMONIAL CARD: Content Calendar -->
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-1">
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed">
+                                "Bea built us a content calendar that's pure gold! Its impact is continuous. Her efficiency is top-notch."
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/8A2BE2/ffffff?text=LM" alt="Lisa M." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/8A2BE2/ffffff?text=LM';">
+                                <div>
+                                    <p class="font-semibold text-base">Lisa M.</p>
+                                    <p class="text-xs text-gray-500">Marketing Director</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Content Workflow Revolutionized</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- NEW TESTIMONIAL CARD: Website Update -->
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-1">
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed">
+                                "Our website needed a refresh. Bea handled the entire update seamlessly. It looks professional and functions perfectly!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/4CAF50/ffffff?text=RT" alt="Robert T." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/4CAF50/ffffff?text=RT';">
+                                <div>
+                                    <p class="font-semibold text-base">Robert T.</p>
+                                    <p class="text-xs text-gray-500">E-commerce Founder</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Website Fully Optimized</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- NEW TESTIMONIAL CARD: Email Campaigns (Example of "project-based work") -->
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-1">
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4 italic leading-relaxed">
+                                "Bea launched our new email campaign series flawlessly. From strategy to execution, every detail was handled, leading to our best open rates ever!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/FF5722/ffffff?text=GS" alt="Grace S." class="w-10 h-10 rounded-full object-cover mr-3" onerror="this.onerror=null; this.src='https://placehold.co/120x120/FF5722/ffffff?text=GS';">
+                                <div>
+                                    <p class="font-semibold text-base">Grace S.</p>
+                                    <p class="text-xs text-gray-500">Online Course Creator</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Email Open Rates +30%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enhanced CTA -->
+                <div class="text-center bg-white rounded-3xl p-8 shadow-xl border border-pink-100 mt-12">
+                    <h3 class="text-2xl font-bold mb-4">Ready to Add Your Agency's Success Story?</h3>
+                    <p class="text-gray-600 mb-6">Your agency's transformation story could be next. Let's chat about making it happen.</p>
+                    <a href="#contact" class="btn-primary btn-urgent">
+                        <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
+                        Book Your Success Call
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: FAQ Section with better user experience for business owners -->
+        <section id="faq" class="section-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Your Agency's Questions, Answered</h2>
+                    <p class="section-subtitle">
+                        Everything you need to know about partnering with a high-impact Strategic Executive Assistant for your digital marketing agency.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-4 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-base group-hover:text-pink-600 transition-colors">How quickly can you integrate and provide impact?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Expect immediate impact within 48 hours! I quickly take over high-priority executive tasks like calendar/inbox management and initial project setups. Full operational streamlining and process improvements typically show significant results by day 30, allowing your leadership to reclaim valuable time for strategic growth.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-4 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-base group-hover:text-pink-600 transition-colors">What makes your support ideal for a digital marketing agency?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    My expertise isn't just in executive support; it's in enabling growth within fast-paced environments like digital agencies. I combine strong operational and project management skills with familiarity in digital marketing concepts (SEO, ads, websites, CRMs), ensuring I can seamlessly support your leadership, client coordination, and even basic marketing ops, all while optimizing for efficiency and scalability.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-4 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-base group-hover:text-pink-600 transition-colors">Are you experienced with our specific project management tools?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Absolutely! I have strong experience with industry-standard tools crucial for digital agencies, including ClickUp, Notion, Asana, Monday.com, GSuite, and Slack. I am also comfortable with WordPress, Webflow, various landing page builders, CRMs, and automation platforms like Zapier and Make (Integromat). My adaptability ensures a rapid and smooth integration with your existing tech stack.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-4 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-base group-hover:text-pink-600 transition-colors">What tangible results can our agency expect?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Based on client successes, your agency can expect to:
+                                </p>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                                    <li>Reclaim 15-25 leadership hours weekly for strategic work and revenue-generating activities.</li>
+                                    <li>Boost overall agency productivity and operational efficiency by up to 45%.</li>
+                                    <li>Enhance client satisfaction and retention through streamlined communication and project management.</li>
+                                    <li>Reduce executive burnout by effectively delegating complex operational tasks.</li>
+                                    <li>Accelerate agency growth, enabling you to scale confidently towards and beyond 7-figure revenue.</li>
+                                </ul>
+                                <p class="text-gray-600">
+                                    These aren't just promises – they're what happens when agencies partner with me for high-impact support.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-4 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-base group-hover:text-pink-600 transition-colors">How do we get started?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    It's simple and geared for agency needs:
+                                </p>
+                                <ol class="list-decimal list-inside text-gray-600 space-y-2 mb-6">
+                                    <li>Book a free 30-minute strategic chat to assess your agency's operational challenges and growth objectives.</li>
+                                    <li>Receive a tailored plan outlining how I can integrate and provide high-impact support.</li>
+                                    <li>Experience immediate relief and a clear path to accelerating your agency's growth.</li>
+                                </ol>
+                                <div class="bg-pink-50 rounded-xl p-4 border border-pink-200">
+                                    <p class="text-pink-800 font-semibold mb-2">Ready to scale your agency with strategic support?</p>
+                                    <a href="#contact" class="btn-primary inline-flex items-center">
+                                        <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
+                                        Schedule Your Free Consultation Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-enhanced hero-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="section-title">Ready to Propel Your Digital Agency Forward?</h2>
+                        <p class="section-subtitle">
+                            Book your free 30-minute strategy call. Discover precisely how I can transform your operational headaches into swift, seamless agency success and free your leadership to drive 7-figure growth.
+                        </p>
+                        <div class="urgency-indicator mb-8">
+                            <i data-lucide="clock" class="h-4 w-4"></i>
+                            Secure your agency's high-impact support!
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        <!-- Right side: Professional Card (moved to the right) -->
+                        <div class="animate-scale-in">
+                            <div class="card-enhanced text-center">
+                                <img
+                                    src="https://ik.imagekit.io/ewoioxq0g/Untitled%20design%20(4).png?updatedAt=1749778070801"
+                                    alt="Bea Villanea - Strategic Operations & Creative Partner for Business Leaders"
+                                    class="w-40 h-40 rounded-full mx-auto mb-6 object-cover shadow-xl ring-4 ring-pink-100"
+                                >
+                                <h3 class="text-2xl font-bold mb-3">Let's Drive Your Agency's Success, Together!</h3>
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    I'm eager to understand your agency's unique operational and growth challenges. Let's strategize how we can collaborate to ensure seamless daily operations and accelerate your ambitious revenue goals. No pressure—just candid conversation and actionable strategies for a smarter, more profitable agency.
+                                </p>
+
+                                <div class="bg-pink-50 rounded-xl p-4 mb-6 border border-pink-200">
+                                    <div class="grid grid-cols-2 gap-4 text-sm">
+                                        <div class="text-center">
+                                            <div class="text-2xl font-bold text-pink-600">98%</div>
+                                            <div class="text-xs text-gray-600">Client Satisfaction Rate</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="text-2xl font-bold text-pink-600">45%</div>
+                                            <div class="text-xs text-gray-600">Average Productivity Increase</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2 text-sm text-gray-500">
+                                    <p class="flex items-center justify-center">
+                                        <i data-lucide="mail" class="h-4 w-4 mr-2"></i>
+                                        villaneabe1@gmail.com
+                                    </p>
+                                    <p class="flex items-center justify-center">
+                                        <i data-lucide="clock" class="h-4 w-4 mr-2"></i>
+                                        Available During U.S. Business Hours
+                                    </p>
+                                    <p class="flex items-center justify-center">
+                                        <i data-lucide="map-pin" class="h-4 w-4 mr-2"></i>
+                                        Philippines-Based, Remote Expert
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Left side: Value Proposition & Contact Options -->
+                        <div class="animate-fade-up">
+                            <div class="bg-white rounded-3xl p-8 shadow-xl border border-pink-100 mb-8">
+                                <h3 class="text-2xl font-bold mb-6 text-center">What Your Agency Will Gain in a Free Call:</h3>
+
+                                <div class="space-y-6">
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="search" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">In-Depth Agency Operations Review</p>
+                                            <p class="text-gray-600 text-sm">Pinpoint where daily operations and project management hinder your agency's growth.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="target" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Tailored Operational Optimization Plan</p>
+                                            <p class="text-gray-600 text-sm">A custom strategy to reclaim 20+ leadership hours weekly, focusing on high-impact agency growth.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="trending-up" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Your Agency's Accelerated Growth Roadmap</p>
+                                            <p class="text-gray-600 text-sm">A clear path to boost productivity within 30 days and scale revenue towards and beyond 7 figures by optimizing processes and client communication.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="gift" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Exclusive Bonus: Agency Efficiency Playbook</p>
+                                            <p class="text-gray-600 text-sm">Your free guide on "How Strategic Executive Support Drives Digital Agency Scalability."</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center space-y-4">
+                                <a href="https://calendly.com/villaneabe1/30min" target="_blank" class="btn-primary btn-urgent w-full justify-center text-lg py-4">
+                                    <i data-lucide="calendar" class="mr-3 h-6 w-6"></i>
+                                    Book Your FREE Agency Strategy Call Now
+                                </a>
+
+                                <p class="text-sm text-gray-500">⚡ Typically books within 24-48 hours</p>
+
+                                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                                    <a href="mailto:villaneabe1@gmail.com" class="btn-secondary flex-1 justify-center">
+                                        <i data-lucide="mail" class="mr-2 h-4 w-4"></i>
+                                        Shoot an Email
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/bea-villanea-3a2a862a9" target="_blank" class="btn-secondary flex-1 justify-center">
+                                        <i data-lucide="linkedin" class="mr-2 h-4 w-4"></i>
+                                        Connect on LinkedIn
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Additional trust signals -->
+                    <div class="text-center mt-12 pt-8 border-t border-pink-200">
+                        <p class="text-gray-600 mb-4">
+                            <strong>🔒 Totally Confidential</strong> • <strong>📞 Zero Pressure</strong> • <strong>💝 Real Value, Guaranteed</strong>
+                        </p>
+                        <p class="text-sm text-gray-500 italic">
+                            "Every conversation starts with truly understanding what your agency needs to thrive. I'm here to enable your growth, not push." - Bea
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ENHANCED: Footer with better structure -->
+    <footer class="bg-gray-900 text-gray-300 py-12 text-center">
+                
+                <p>&copy; 2025 Bea Villanea. All rights reserved. | Empowering Digital Agencies to Scale!</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced Floating CTA Button -->
+    <a href="#contact" class="floating-cta">
+        <i data-lucide="calendar" class="h-5 w-5"></i>
+        Ready to Scale? Book a Call
+        <span class="text-xs bg-white/20 px-2 py-1 rounded-full">FREE</span>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lucide icons
+            lucide.createIcons();
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) { // Added null checks
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Enhanced Intersection Observer for animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '50px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements and check initial visibility
+            document.querySelectorAll('.animate-fade-up, .animate-scale-in').forEach(el => {
+                observer.observe(el);
+
+                // Check if element is already in view on page load
+                const rect = el.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                if (rect.top >= 0 && rect.top <= windowHeight) {
+                    el.classList.add('in-view');
+                }
+            });
+
+            // Enhanced FAQ functionality
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const faqItem = button.closest('.faq-item');
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const chevron = button.querySelector('i[data-lucide="chevron-down"]');
+
+                    const isOpen = answer && !answer.classList.contains('hidden'); // Ensure answer exists
+                    // Close all other FAQ items if they are open
+                    document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                        if (otherAnswer && otherAnswer !== answer && !otherAnswer.classList.contains('hidden')) { // Ensure otherAnswer exists
+                            otherAnswer.classList.add('hidden');
+                            const otherChevron = otherAnswer.closest('.faq-item')?.querySelector('i[data-lucide="chevron-down"]'); // Use optional chaining
+                            if (otherChevron) {
+                                otherChevron.style.transform = 'rotate(0deg)';
+                            }
+                        }
+                    });
+
+                    // Toggle current item
+                    if (answer) { // Ensure answer exists
+                        if (isOpen) {
+                            answer.classList.add('hidden');
+                            if (chevron) {
+                                chevron.style.transform = 'rotate(0deg)';
+                            }
+                        } else {
+                            answer.classList.remove('hidden');
+                            if (chevron) {
+                                chevron.style.transform = 'rotate(180deg)';
+                            }
+                        }
+                    }
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add scroll progress indicator
+            const progressBar = document.createElement('div');
+            progressBar.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 3px;
+                background: linear-gradient(135deg, #E91E63, #FF6B9D);
+                z-index: 9999;
+                transition: width 0.25s ease;
+            `;
+            document.body.appendChild(progressBar);
+
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+
+            // Enhanced floating CTA behavior
+            const floatingCTA = document.querySelector('.floating-cta');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (floatingCTA) { // Null check for floatingCTA
+                    if (scrollTop > lastScrollTop && scrollTop > 100) {
+                        // Scrolling down - hide CTA
+                        floatingCTA.style.transform = 'translateY(100px)';
+                        floatingCTA.style.opacity = '0';
+                    } else {
+                        // Scrolling up - show CTA
+                        floatingCTA.style.transform = 'translateY(0)';
+                        floatingCTA.style.opacity = '1';
+                    }
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            // New: Scroll-activated number counter animation
+            const numberCounters = document.querySelectorAll('.result-number');
+            const animatedNumbers = new Set(); // To ensure animation runs only once per element
+            const animateNumber = (element) => {
+                if (animatedNumbers.has(element)) {
+                    return; // Already animated
+                }
+
+                const finalValue = element.getAttribute('data-final-value');
+                // Extract numeric part using regex
+                const numericMatch = finalValue.match(/(\d+(\.\d+)?)/);
+                const numericTarget = numericMatch ? parseFloat(numericMatch[1]) : 0;
+
+                let current = 0;
+                const duration = 1500; // milliseconds
+                const step = numericTarget / (duration / 16); // ~60 frames per second for smoothness
+
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= numericTarget) {
+                        clearInterval(timer);
+                        element.textContent = finalValue; // Set to the original text with suffix
+                        animatedNumbers.add(element); // Mark as animated
+                    } else {
+                        // Display integer if original is integer, otherwise float (with 0 decimal places for simplicity)
+                        if (Number.isInteger(numericTarget)) {
+                            element.textContent = Math.floor(current);
+                        } else {
+                            element.textContent = current.toFixed(0); // Keeping it as integer for current count
+                        }
+                    }
+                }, 16); // Approximately 60 frames per second
+            };
+
+            const resultsSection = document.getElementById('results'); // Get the whole section
+            const sectionObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Find all number elements within this section
+                        const numbersInView = entry.target.querySelectorAll('.result-number');
+                        numbersInView.forEach(numElement => {
+                            animateNumber(numElement);
+                        });
+                        // Stop observing the section once its numbers are animated
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2 // Trigger when 20% of the section is visible for better mobile activation
+            });
+
+            // Observe the entire results section
+            if (resultsSection) {
+                sectionObserver.observe(resultsSection);
+            }
+
+            // Infinite Testimonial Carousel functionality
+            const testimonialCarouselTrack = document.getElementById('testimonial-carousel-track');
+            // Select all direct children that are testimonial cards
+            let originalTestimonialCards = Array.from(testimonialCarouselTrack.querySelectorAll('.testimonial-card'));
+
+            if (testimonialCarouselTrack && originalTestimonialCards.length > 0) {
+                // Clone all original cards and append them once to create the seamless loop
+                originalTestimonialCards.forEach(card => {
+                    testimonialCarouselTrack.appendChild(card.cloneNode(true));
+                });
+
+                const calculateAndSetAnimation = () => {
+                    // Recalculate original cards if any changes occurred (though this isn't dynamic in this simple setup)
+                    // Ensure the width calculation is based on ONE full set of original cards
+                    let totalOriginalWidth = 0;
+                    const gap = parseFloat(window.getComputedStyle(testimonialCarouselTrack).gap);
+
+                    originalTestimonialCards.forEach(card => {
+                        totalOriginalWidth += card.offsetWidth + gap;
+                    });
+                    // Subtract the last gap as it's not between cards
+                    totalOriginalWidth -= gap;
+
+                    // Set CSS variables for animation
+                    testimonialCarouselTrack.style.setProperty('--scroll-distance', `-${totalOriginalWidth}px`);
+                    const animationSpeed = 0.50; /* Adjusted from 0.04 to 0.08 for even faster testimonials */ // pixels per millisecond (adjust for desired speed)
+                    const duration = totalOriginalWidth / animationSpeed; // milliseconds
+                    testimonialCarouselTrack.style.setProperty('--animation-duration', `${duration / 1000}s`); // Convert to seconds
+                    // Pause on hover
+                    testimonialCarouselTrack.addEventListener('mouseenter', () => {
+                        testimonialCarouselTrack.style.animationPlayState = 'paused';
+                    });
+                    testimonialCarouselTrack.addEventListener('mouseleave', () => {
+                        testimonialCarouselTrack.style.animationPlayState = 'running';
+                    });
+                };
+                // Initial setup for the infinite carousel
+                calculateAndSetAnimation();
+                // Recalculate and reset animation on window resize
+                window.addEventListener('resize', calculateAndSetAnimation);
+            }
+
+            // NEW: Portfolio Carousel functionality
+            const portfolioTrack = document.getElementById('portfolio-carousel-track');
+            // Re-select slides to ensure no duplicates from previous edits are carried over
+            const portfolioSlides = Array.from(portfolioTrack.querySelectorAll('.portfolio-slide'));
+            const portfolioPrevBtn = document.getElementById('portfolio-prev-btn');
+            const portfolioNextBtn = document.getElementById('portfolio-next-btn');
+            const portfolioDotsContainer = document.getElementById('portfolio-dots');
+            let currentPortfolioSlide = 0;
+
+            const updatePortfolioCarousel = () => {
+                const offset = -currentPortfolioSlide * 100;
+                portfolioTrack.style.transform = `translateX(${offset}%)`;
+
+                // Update dots
+                Array.from(portfolioDotsContainer.children).forEach((dot, index) => {
+                    if (index === currentPortfolioSlide) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            };
+
+            // Navigation functions
+            portfolioNextBtn.addEventListener('click', () => {
+                currentPortfolioSlide = (currentPortfolioSlide + 1) % portfolioSlides.length;
+                updatePortfolioCarousel();
+            });
+
+            portfolioPrevBtn.addEventListener('click', () => {
+                currentPortfolioSlide = (currentPortfolioSlide - 1 + portfolioSlides.length) % portfolioSlides.length;
+                updatePortfolioCarousel();
+            });
+
+            // Re-create dots based on the actual number of slides
+            portfolioDotsContainer.innerHTML = ''; // Clear existing dots
+            portfolioSlides.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.classList.add('portfolio-dot');
+                dot.dataset.slideIndex = index;
+                dot.addEventListener('click', (event) => {
+                    currentPortfolioSlide = parseInt(event.target.dataset.slideIndex);
+                    updatePortfolioCarousel();
+                });
+                portfolioDotsContainer.appendChild(dot);
+            });
+
+
+            // Initial carousel display
+            updatePortfolioCarousel();
+        });
+    </script>
+</body>
+</html>
